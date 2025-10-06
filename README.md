@@ -69,7 +69,7 @@ TFMDataset/
     └── video.zip # 15 original tear film videos based on placido rings
 ```
 
-**📝 License for Data:** The TFM Dataset is available for **non-commercial research purposes only**. Please see the  [`DATASET LICENSE.md`](https://github.com/glory-wan/TF-Net/blob/main/DATASET LICENSE.md) for details. By downloading, you agree to the terms.
+**📝 License for Data:** The TFM Dataset is available for **non-commercial research purposes only**. Please see the  [`DATASET LICENSE.md`](https://github.com/glory-wan/TF-Net/blob/main/DATASET_LICENSE.md) for details. By downloading, you agree to the terms.
 
 ## 🛠️ Installation & Quick Start
 
