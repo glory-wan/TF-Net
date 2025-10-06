@@ -126,7 +126,9 @@ TFM dataset/
     └── TF-Crop/ # The pre-cropped ROI subset for segmentation
 ```
 
-TF-Crop(即crop_broken_only，用于分割模型训练)，crop-full，crop-non-broken用于消融实验。
+crop_broken_only(i.e. TF-Crop, used for segmentation model training)
+
+crop-full, and crop-non-broken are used for ablation experiments.
 
 The structure of TF-Crop should look like:
 
