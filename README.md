@@ -8,12 +8,13 @@ This repository is the official implementation of our IEEE TMI paper. We introdu
 
 ## 🚀 News
 
-- **[2025-10-07]**  🎉 TFM Dataset of TF-Net is released!
+- **[2025-10-08]**        Code of TF-Net is coming soon !
+- **[2025-10-07]**  🎉 TFM Dataset of TF-Net is released !
 
 ## ✨ Highlights
 
 - **🧬 TFM Dataset:** The first public dataset with **6,247 high-resolution images** annotated for three vision tasks: **frame classification**, **Placido ring detection**, and **pixel-wise TFBU segmentation**.
-- **⚡ TF-Net:** A novel, computationally efficient segmentation model using a **re-parameterized MobileOne-mini backbone** and **Pyramid Pooling Module**, achieving real-time performance.
+- **⚡ TF-Net:** A novel, computationally efficient segmentation model using a re-parameterized MobileOne-mini backbone and Pyramid Pooling Module, achieving real-time performance.
 - **🔄 TF-Collab Pipeline:** An integrated, end-to-end pipeline that synergistically combines classification, detection, and segmentation models to fully automate TFBU analysis, mirroring the clinical workflow.
 - **🏆 Benchmark:** We provide benchmark results against numerous state-of-the-art medical image segmentation models.
 
@@ -23,6 +24,17 @@ The TFM Dataset is designed to foster research in automated dry eye diagnosis.
 
 ### Dataset Statistics
 
+## 📊 Dataset Statistics
+
+The TFM Dataset comprises 6,247 high-resolution frames extracted from 15 clinical videos, annotated for three complementary vision tasks.
+
+### Task-wise Distribution
+
+| Task | Categories | # Annotations | Resolution | Split (Train:Val:Test) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Classification (TF-Cls)**   | 'Clear', 'Closed', 'Broken', 'Blur' | 6,247 | 3632 × 2760 | 4,687:561:999(75%:9%:16%) |
+| **Object Detection (TF-Det)** | Inside, Middle, Outside Rings | 4,736 | 3632 × 2760 | 3,546:430:760(75%:9%:16%) |
+| **Segmentation (TF-Seg)** | TFBU Area | 873 | 1498 × 1337(TF-Crop) | 678:69:126(78%:8%:14%) |
 
 
 ### Annotation Examples
@@ -39,7 +51,23 @@ Sample visualization of the **TF-Crop** dataset from cropping strategy.. The fir
 
 The TFM Dataset can be downloaded from the following sources:
 
+[Baidu Netdisk, key:TFMD](https://pan.baidu.com/s/1yRtk-LomR3y7qZlHUTtNjw?pwd=TFMD) 
 
+Google Drive: Coming soon
+
+The structure of the dataset in the cloud disk is as follows
+
+```
+TFMDataset/
+    ├── TFM-dataset/
+    │    ├── images.zip
+    │    └── labels.zip 
+    ├── TFM-crop/
+    │    ├── crop_broken_only.zip
+    │    ├── crop_full.zip
+    │    └── crop_non_broken.zip
+    └── video.zip # 15 original tear film videos based on placido rings
+```
 
 **📝 License for Data:** The TFM Dataset is available for **non-commercial research purposes only**. Please see the  file for details. By downloading, you agree to the terms.
 
