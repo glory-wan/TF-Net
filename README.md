@@ -184,6 +184,16 @@ Download link for the weights of the trained TF-Net: [Baidu Netdisk ( key:TFMD)]
    python get_metrics_to_csv.py --gt_folder path/to/gt/folder --pred_folder path/to/predicted/masks/folder  --save_folder path/to/save/folder
    ```
 
+#### Additional Utility Scripts
+
+1. **Calculate model parameters and FLOPs:**
+
+   ```
+   python get_params_flops.py
+   ```
+
+2. **Measure model inference time:**
+
 ## 📈 Results
 
 ### Quantitative Segmentation Results on TF-Crop Test Set
@@ -191,6 +201,16 @@ Download link for the weights of the trained TF-Net: [Baidu Netdisk ( key:TFMD)]
 Our TF-Net achieves a favorable balance between accuracy and speed, making it ideal for real-time clinical applications.
 
 ![Compare_result](assets/Compare_result.jpg)
+
+| Model     | Param(M) <br />train/infer | Flops(G)<br /> train/infer | FPS(ms) <br />GPU/CPU | mIoU  | mDSC  | mRecall | HD95↓ | ASSD↓ |
+| --------- | -------------------------- | -------------------------- | --------------------- | ----- | ----- | ------- | ----- | ----- |
+| TF-Net s0 | 0.72/0.65                  | 2.7/2.4                    | 92.2/20.0             | 0.698 | 0.779 | 0.975   | 212.9 | 54.1  |
+| TF-Net s1 | 2.6/2.3                    | 8.9/7.9                    | 51.5/10.3             | 0.711 | 0.792 | 0.976   | 182.0 | 47.8  |
+| TF-Net s2 | 5.7/5.2                    | 19.8/17.6                  | 24.5/6.1              | 0.720 | 0.800 | 0.973   | 180.8 | 47.0  |
+| TF-Net s3 | 10.2/9.2                   | 35.1/31.3                  | 17.8/4.2              | 0.721 | 0.801 | 0.972   | 187.5 | 51.9  |
+| TF-Net s4 | 15.9/14.4                  | 54.6/48.8                  | 10.3/3.0              | 0.737 | 0.814 | 0.965   | 175.6 | 44.8  |
+| TFNet s5 | 22.91/78.52 | 20.69/70.23 | 0.722 | 0.801 | 0.969 | 186.8 | 48.1 |
+| TFNet s6 | 40.71/139.24 | 36.77/124.75 | 0.738 | 0.815 | 0.965 | 217.8 | 59.0 |
 
 ## 📄 License
 
