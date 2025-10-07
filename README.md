@@ -160,28 +160,28 @@ The structure of TF-Crop should look like:
 
 ### TF-Net & trained Models
 
-We provide trained weights for TF-Net and other baseline models.
+We provide trained `weight` for TF-Net. The other baseline models are trained by [segmentation_models](https://github.com/qubvel/segmentation_models) library .
 
-
+Download link for the weights of the trained TF-Net: [Baidu Netdisk ( key:TFMD)](https://pan.baidu.com/s/1yRtk-LomR3y7qZlHUTtNjw?pwd=TFMD) or [Google Drive](https://drive.google.com/drive/folders/1OSCDdOlNS-yKKZxybzqgjKrVLGC-XtHU?usp=drive_link)
 
 ### Training & Evaluation
 
 1. **Train TF-Net from scratch:**
 
    ```
-   
+   python train_command.py --data_dir path/to/TF-crop
    ```
 
 2. **Predict on the test set:**
 
    ```
-   
+   python predict_mask.py --model_path path/to/model/like/TFNet_2_0.25_mobileone-mini.pt --image_dir path/to/folder/saved/images --output_path path/to/save/folder
    ```
 
 3. **calculate metrics**: Iou, DSC, Recall, FPR, HD95, ASSD
 
    ```
-   
+   python get_metrics_to_csv.py --gt_folder path/to/gt/folder --pred_folder path/to/predicted/masks/folder  --save_folder path/to/save/folder
    ```
 
 ## 📈 Results
@@ -203,4 +203,3 @@ If you use the TFM Dataset, TF-Net, or TF-Collab in your research, please cite o
 ```
 
 ```
-

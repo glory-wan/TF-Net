@@ -13,7 +13,7 @@ def main():
                         help='Name of the base model architecture')
 
     # model arguments
-    parser.add_argument('--nc', type=int, default=2,
+    parser.add_argument('--nc', '--num_class', type=int, default=2,
                         help='Number of input channels for the model')
     parser.add_argument('--wid', type=float, default=1.0,
                         help='Width multiplier for model scaling')
