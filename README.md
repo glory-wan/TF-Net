@@ -85,6 +85,10 @@ conda activate TFNet
 pip install -r requirements.txt
 ```
 
+```
+pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1
+```
+
 ### 2. Data Preparation
 
 1. Download the TFM Dataset from the link above.
@@ -192,4 +196,13 @@ Our TF-Net achieves a favorable balance between accuracy and speed, making it id
 
 ## 📄 License
 
-This project's code is released under the . The TFM Dataset is for **non-commercial research use only**. Please refer to  for the dataset's license terms.
+This project's code is released under the [LICENSE](https://github.com/glory-wan/TF-Net/blob/main/LICENSE). The TFM Dataset is for **non-commercial research use only**. Please refer to  for the [DATASET_LICENSE](https://github.com/glory-wan/TF-Net/blob/main/DATASET_LICENSE.md) terms.
+
+## 📜 Citation
+
+If you use the TFM Dataset, TF-Net, or TF-Collab in your research, please cite our paper:
+
+```
+
+```
+
