@@ -1,1 +1,4 @@
 tqdm
+opencv-python
+medpy==0.5.2
+pandas
