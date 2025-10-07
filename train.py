@@ -3,16 +3,20 @@ from TFNet import train_model
 
 def main():
     """Main training script - direct execution version"""
-    # Set your parameters directly here
+
     data_dir = 'path/to/TF-crop dataset'  # Change this to your dataset path
 
-    # Call train_model with direct parameters
+    # Set your parameters directly here
     train_model(
         base_model_name='TFNet',
+        data_dir=data_dir,
+
+        # model arguments
         nc=2,
         wid=0.25,
         imgz=512,
-        data_dir=data_dir,
+
+        # Training hyperparameters
         batch_size=2,
         num_classes=2,
         lr=0.001,

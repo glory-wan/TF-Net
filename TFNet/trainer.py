@@ -16,7 +16,7 @@ from TFNet import create_tfnet_variants
 class Trainer:
     """Training class for TF-Net segmentation model"""
 
-    def __init__(self, model, train_loader, val_loader, criterion, optimizer, scheduler,
+    def __init__(self, model, train_loader, val_loader, criterion, optimizer, scheduler, width,
                  num_epochs, device, num_classes, backbone='mobileone-mini', model_name='TF-Net', save_dir='./models'):
         """
         Initialize the trainer
@@ -47,6 +47,7 @@ class Trainer:
         self.backbone = backbone
         self.model_name = model_name
         self.save_dir = save_dir
+        self.width = width
 
         # Create directories
         os.makedirs(save_dir, exist_ok=True)
@@ -146,6 +147,8 @@ class Trainer:
                 'optimizer_state_dict': self.optimizer.state_dict(),
                 'loss': self.best_val_loss,
                 'miou': self.best_miou,
+                'nc': self.num_classes,
+                'wid': self.width,
             }
 
             model_path = os.path.join(self.save_dir, f'{self.model_name}-{self.backbone}.pt')
@@ -163,7 +166,7 @@ class Trainer:
             else list(self.best_iou_per_class),
             'train_losses': self.train_losses,
             'val_losses': self.val_losses,
-            'val_mious': self.val_mious
+            'val_mious': self.val_mious,
         }
 
         json_path = os.path.join(self.save_dir, 'train_json', f'{self.model_name}_{self.backbone}.json')
@@ -329,7 +332,8 @@ def train_model(
         device=device,
         num_classes=num_classes,
         backbone='mobileone-mini',
-        model_name=model_name
+        model_name=model_name,
+        width=wid,
     )
 
     # Execute training process

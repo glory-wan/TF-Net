@@ -7,18 +7,20 @@ def main():
     parser = argparse.ArgumentParser(description='Image Segmentation Training')
 
     # Add arguments corresponding to train_model parameters
+    parser.add_argument('--data_dir', type=str, required=True,
+                        help='Path to the dataset directory (required)')
     parser.add_argument('--base_model_name', type=str, default='TFNet',
                         help='Name of the base model architecture')
+
+    # model arguments
     parser.add_argument('--nc', type=int, default=2,
                         help='Number of input channels for the model')
     parser.add_argument('--wid', type=float, default=1.0,
                         help='Width multiplier for model scaling')
-    parser.add_argument('--no-se', dest='se', action='store_false',
-                        help='Disable Squeeze-and-Excitation blocks')
     parser.add_argument('--imgz', type=int, default=512,
                         help='Input image size (height and width)')
-    parser.add_argument('--data_dir', type=str, required=True,
-                        help='Path to the dataset directory (required)')
+
+    # Training hyperparameters
     parser.add_argument('--batch_size', type=int, default=2,
                         help='Number of samples per batch')
     parser.add_argument('--num_classes', type=int, default=2,
