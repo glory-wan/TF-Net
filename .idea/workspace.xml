@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dbaaf971-3432-4e5e-b676-f0c81207013d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_command.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
