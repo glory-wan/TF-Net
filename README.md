@@ -8,7 +8,7 @@ This repository is the official implementation of our IEEE TMI paper. We introdu
 
 ## 🚀 News
 
-- **[2025-10-08]**        Code of TF-Net is coming soon !
+- **[2025-10-08]**  🎉 The code of TF-Net and training scripts are released!
 - **[2025-10-07]**  🎉 TFM Dataset of TF-Net is released !
 
 ## ✨ Highlights
@@ -22,9 +22,7 @@ This repository is the official implementation of our IEEE TMI paper. We introdu
 
 The TFM Dataset is designed to foster research in automated dry eye diagnosis.
 
-### Dataset Statistics
-
-## 📊 Dataset Statistics
+### 📊 Dataset Statistics
 
 The TFM Dataset comprises 6,247 high-resolution frames extracted from 15 clinical videos, annotated for three complementary vision tasks.
 
