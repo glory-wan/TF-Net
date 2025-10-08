@@ -228,5 +228,10 @@ This project's code is released under the [LICENSE](https://github.com/glory-wan
 If you use the TFM Dataset, TF-Net, or TF-Collab in your research, please cite our paper:
 
 ```
-
+@misc{2510.05615,
+Author = {Guangrong Wan and Jun liu and Tang tang and Lianghao Shi and Wenjun Luo and TingTing Xu},
+Title = {TFM Dataset: A Novel Multi-task Dataset and Integrated Pipeline for Automated Tear Film Break-Up Segmentation},
+Year = {2025},
+Eprint = {arXiv:2510.05615},
+}
 ```
