@@ -4,10 +4,13 @@
 
 **🏠 Project Page:** *[coming soon]*
 
+**[📜](https://arxiv.org/abs/2510.05615) Paper (arXiv):** [arXiv:2510.05615 [cs.CV]](https://arxiv.org/abs/2510.05615)
+
 This repository is the official implementation of our IEEE TMI paper. We introduce the **Tear Film Multi-task (TFM) Dataset**, the first comprehensive public benchmark for multi-task tear film analysis, alongside **TF-Net**, an efficient segmentation model, and **TF-Collab**, an integrated pipeline for fully automated tear film break-up (TFBU) analysis.
 
 ## 🚀 News
 
+- **[2025-10-09]** 🚀 **Our Paper is on arXiv!** Check out the preprint: [arXiv:2510.05615 [cs.CV]](https://arxiv.org/abs/2510.05615)
 - **[2025-10-08]**  🎉 The code of TF-Net and training scripts are released!
 - **[2025-10-07]**  🎉 TFM Dataset of TF-Net is released !
 
