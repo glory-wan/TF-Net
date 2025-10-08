@@ -68,7 +68,7 @@ if __name__ == '__main__':
         for k, model in models_.items():
             if k != 'full':
                 continue
-                
+
             model_name = f'{k}_TFNet_{nc}_{wid}_{se}_{imgz}'
 
             torch.cuda.empty_cache()
