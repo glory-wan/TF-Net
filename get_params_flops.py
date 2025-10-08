@@ -66,6 +66,9 @@ if __name__ == '__main__':
     for wid in wids:
         models_ = create_tfnet_variants(num_classes=nc, width=wid)
         for k, model in models_.items():
+            if k != 'full':
+                continue
+                
             model_name = f'{k}_TFNet_{nc}_{wid}_{se}_{imgz}'
 
             torch.cuda.empty_cache()

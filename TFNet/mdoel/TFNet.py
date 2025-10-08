@@ -497,3 +497,4 @@ def create_tfnet_variants(num_classes=1, width=1.0, use_se=False, inference_mode
         'no_skip': no_skip_model,
         'no_ppm_no_skip': no_ppm_no_skip_model
     }
+
