@@ -6,13 +6,14 @@
 
 **📜 Paper (arXiv):** [arXiv:2510.05615 [cs.CV]](https://arxiv.org/abs/2510.05615)
 
-This repository is the official implementation of our IEEE TMI paper. We introduce the **Tear Film Multi-task (TFM) Dataset**, the first comprehensive public benchmark for multi-task tear film analysis, alongside **TF-Net**, an efficient segmentation model, and **TF-Collab**, an integrated pipeline for fully automated tear film break-up (TFBU) analysis.
+This repository is the official implementation of our [paper](https://arxiv.org/abs/2510.05615). We introduce the **Tear Film Multi-task (TFM) Dataset**, the first comprehensive public benchmark for multi-task tear film analysis, alongside **TF-Net**, an efficient segmentation model, and **TF-Collab**, an integrated pipeline for fully automated tear film break-up (TFBU) analysis.
 
 ## 🚀 News
 
+- **[2025-10-10]** 🤗 Our paper has been officially indexed by  **[Hugging Face](https://huggingface.co/papers/2510.05615)** !
 - **[2025-10-09]** 🚀 **Our Paper is on arXiv!** Check out the preprint: [arXiv:2510.05615 [cs.CV]](https://arxiv.org/abs/2510.05615)
 - **[2025-10-08]**  🎉 The code of TF-Net and training scripts are released!
-- **[2025-10-07]**  🎉 TFM Dataset of TF-Net is released !
+- **[2025-10-07]**  🎉 TFM Dataset is released !
 
 ## ✨ Highlights
 
@@ -50,13 +51,29 @@ Sample visualization of the **TF-Crop** dataset from cropping strategy.. The fir
 
 ### Download
 
-The TFM Dataset can be downloaded from the following sources:
+The TFM Dataset, comprising human ocular images, is a sensitive resource. To ensure ethical use and protect patient privacy, the dataset is made available **only for non-commercial academic research purposes** under a data use agreement. Access requires a brief application and approval.
 
-[Baidu Netdisk, key:TFMD](https://pan.baidu.com/s/1yRtk-LomR3y7qZlHUTtNjw?pwd=TFMD) 
+#### **Application Process**
 
-[Google Drive](https://drive.google.com/drive/folders/1OSCDdOlNS-yKKZxybzqgjKrVLGC-XtHU?usp=drive_link)
+1. **Prepare an Application Email**: Please send a formal request to the corresponding author, **Prof. Jun Liu** (`junliu@cqupt.edu.cn`), using the template below.
 
-The structure of the dataset in the cloud disk is as follows
+2. **Email Subject**:
+
+   `Application for TFM Dataset Access - [Your Institution Name]`
+
+3. **Email Content Must Include**:
+
+   - **Applicant's Full Name**:
+   - **Your Title/Academic Role** (e.g., PhD Student, Postdoc, Professor):
+   - **Institution/University**:
+   - **Intended Research Purpose** (Please provide a brief description of your project and how you plan to use the TFM Dataset):
+   - **Agreement to the License Terms**: Explicitly state: *"I have read and agree to abide by the terms of the [DATASET_LICENSE.md](https://github.com/glory-wan/TF-Net/blob/main/DATASET_LICENSE.md), and confirm that the dataset will be used solely for non-commercial academic research."*
+
+4. **Review and Approval**: Upon receiving your application, we will review it promptly. If approved, you will receive the download links and passwords via email.
+
+#### **Dataset Structure**
+
+Once you have obtained access, the dataset structure in the cloud storage is as follows:
 
 ```
 TFMDataset/
@@ -70,7 +87,7 @@ TFMDataset/
     └── video.zip # 15 original tear film videos based on placido rings
 ```
 
-**📝 License for Data:** The TFM Dataset is available for **non-commercial research purposes only**. Please see the  [`DATASET LICENSE.md`](https://github.com/glory-wan/TF-Net/blob/main/DATASET_LICENSE.md) for details. By downloading, you agree to the terms.
+**📜 License for Data**: The TFM Dataset is available strictly for **non-commercial research purposes**. By applying for and downloading the dataset, you agree to be bound by the terms specified in the [`DATASET_LICENSE.md`](https://github.com/glory-wan/TF-Net/blob/main/DATASET_LICENSE.md). Any violation of the license terms may result in revocation of access and other legal consequences.
 
 ## 🛠️ Installation & Quick Start
 
@@ -165,7 +182,7 @@ The structure of TF-Crop should look like:
 
 We provide trained `weight` for TF-Net. The other baseline models are trained by [segmentation_models](https://github.com/qubvel/segmentation_models) library .
 
-Download link for the weights of the trained TF-Net: [Baidu Netdisk ( key:TFMD)](https://pan.baidu.com/s/1yRtk-LomR3y7qZlHUTtNjw?pwd=TFMD) or [Google Drive](https://drive.google.com/drive/folders/1OSCDdOlNS-yKKZxybzqgjKrVLGC-XtHU?usp=drive_link)
+Download link for the weights of the trained TF-Net: [Baidu Netdisk ( key:nj49)](https://pan.baidu.com/s/1_cS9Fzh3nsuPgE202zGlqg?pwd=nj49) or [Google Drive](https://drive.google.com/drive/folders/1OSCDdOlNS-yKKZxybzqgjKrVLGC-XtHU?usp=drive_link)
 
 ### Training & Evaluation
 
@@ -177,11 +194,13 @@ Download link for the weights of the trained TF-Net: [Baidu Netdisk ( key:TFMD)]
 
 2. **Predict on the test set:**
 
+   Our predicted mask can be download at :[Baidu Netdisk ( key:nj49)](https://pan.baidu.com/s/1_cS9Fzh3nsuPgE202zGlqg?pwd=nj49) or [Google Drive](https://drive.google.com/drive/folders/1OSCDdOlNS-yKKZxybzqgjKrVLGC-XtHU?usp=drive_link)
+
    ```
    python predict_mask.py --model_path path/to/model/like/TFNet_2_0.25_mobileone-mini.pt --image_dir path/to/folder/saved/images --output_path path/to/save/folder
    ```
 
-3. **calculate metrics**: Iou, DSC, Recall, FPR, HD95, ASSD
+4. **calculate metrics**: Iou, DSC, Recall, FPR, HD95, ASSD
 
    ```
    python get_metrics_to_csv.py --gt_folder path/to/gt/folder --pred_folder path/to/predicted/masks/folder  --save_folder path/to/save/folder
@@ -219,8 +238,8 @@ Our TF-Net achieves a favorable balance between accuracy and speed, making it id
 | TF-Net s2 | 5.7/5.2                    | 19.8/17.6                  | 83.2/9.4       | 0.720 | 0.800 | 0.973   | 180.8 | 47.0  |
 | TF-Net s3 | 10.2/9.2                   | 35.1/31.3                  | 64.3/6.3       | 0.721 | 0.801 | 0.972   | 187.5 | 51.9  |
 | TF-Net s4 | 15.9/14.4                  | 54.6/48.8                  | 38.3/4.3        | 0.737 | 0.814 | 0.965   | 175.6 | 44.8  |
-| TFNet s5 | 22.91/78.52 | 20.69/70.23 | 33.2/3.2 | 0.722 | 0.801 | 0.969 | 186.8 | 48.1 |
-| TFNet s6 | 40.71/139.24 | 36.77/124.75 | 21.9/1.9 | 0.738 | 0.815 | 0.965 | 217.8 | 59.0 |
+| TF-Net s5 | 22.91/78.52 | 20.69/70.23 | 33.2/3.2 | 0.722 | 0.801 | 0.969 | 186.8 | 48.1 |
+| TF-Net s6 | 40.71/139.24 | 36.77/124.75 | 21.9/1.9 | 0.738 | 0.815 | 0.965 | 217.8 | 59.0 |
 
 ## 📄 License
 
@@ -232,7 +251,7 @@ If you use the TFM Dataset, TF-Net, or TF-Collab in your research, please cite o
 
 ```
 @misc{2510.05615,
-Author = {Guangrong Wan and Jun liu and Tang tang and Lianghao Shi and Wenjun Luo and TingTing Xu},
+Author = {Guangrong Wan and Jun liu and Qiyang Zhou and Tang tang and Lianghao Shi and Wenjun Luo and TingTing Xu},
 Title = {TFM Dataset: A Novel Multi-task Dataset and Integrated Pipeline for Automated Tear Film Break-Up Segmentation},
 Year = {2025},
 Eprint = {arXiv:2510.05615},
