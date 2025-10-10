@@ -53,7 +53,7 @@ Sample visualization of the **TF-Crop** dataset from cropping strategy.. The fir
 
 The TFM Dataset, comprising human ocular images, is a sensitive resource. To ensure ethical use and protect patient privacy, the dataset is made available **only for non-commercial academic research purposes** under a data use agreement. Access requires a brief application and approval.
 
-#### **Application Process**
+#### **Dataset acquisition**
 
 1. **Prepare an Application Email**: Please send a formal request to the corresponding author, **Prof. Jun Liu** (`junliu@cqupt.edu.cn`), using the template below.
 
