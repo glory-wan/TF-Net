@@ -33,3 +33,5 @@ var/
 # 环境变量
 .env
 .venv
+.idea/workspace.xml
+/.idea

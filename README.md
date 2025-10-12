@@ -80,11 +80,10 @@ TFMDataset/
     ├── TFM-dataset/
     │    ├── images.zip
     │    └── labels.zip 
-    ├── TFM-crop/
-    │    ├── crop_broken_only.zip
-    │    ├── crop_full.zip
-    │    └── crop_non_broken.zip
-    └── video.zip # 15 original tear film videos based on placido rings
+    └── TFM-crop/
+         ├── crop_broken_only.zip
+         ├── crop_full.zip
+         └── crop_non_broken.zip
 ```
 
 **📜 License for Data**: The TFM Dataset is available strictly for **non-commercial research purposes**. By applying for and downloading the dataset, you agree to be bound by the terms specified in the [`DATASET_LICENSE.md`](https://github.com/glory-wan/TF-Net/blob/main/DATASET_LICENSE.md). Any violation of the license terms may result in revocation of access and other legal consequences.
