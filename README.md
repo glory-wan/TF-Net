@@ -250,7 +250,7 @@ If you use the TFM Dataset, TF-Net, or TF-Collab in your research, please cite o
 
 ```
 @misc{2510.05615,
-Author = {Guangrong Wan and Jun liu and Qiyang Zhou and Tang tang and Lianghao Shi and Wenjun Luo and TingTing Xu},
+Author = {Guangrong Wan, Jun liu, Qiyang Zhou, Tang tang, Lianghao Shi, Wenjun Luo, Tingting Xu},
 Title = {TFM Dataset: A Novel Multi-task Dataset and Integrated Pipeline for Automated Tear Film Break-Up Segmentation},
 Year = {2025},
 Eprint = {arXiv:2510.05615},
